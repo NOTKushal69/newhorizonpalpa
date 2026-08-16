@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+/*
+ * Design system for New Horizon.
+ * Brand colours are taken from the admission poster (deep navy + gold) with the
+ * red crest sitting on white/light badges. One system, applied everywhere —
+ * sections are not styled ad hoc.
+ */
+@theme {
+  --color-navy-50: #eef2fb;
+  --color-navy-100: #d5def5;
+  --color-navy-200: #adbfe9;
+  --color-navy-400: #4f6bb3;
+  --color-navy-600: #1b3e7e;
+  --color-navy-700: #142f61;
+  --color-navy-800: #0e2249;
+  --color-navy-900: #0b2b5c;
+  --color-navy-950: #071a3a;
+
+  --color-gold-400: #f7c948;
+  --color-gold-500: #f5b301;
+  --color-gold-600: #d99700;
+
+  --color-crest: #d81f2a;
+
+  --color-ink: #16233b;
+  --color-mist: #f5f7fb;
+
+  --font-sans: var(--font-body);
+  --font-serif: var(--font-heading);
+
+  --shadow-card: 0 1px 2px rgba(11, 43, 92, 0.06), 0 12px 30px -12px rgba(11, 43, 92, 0.18);
+  --shadow-lift: 0 20px 45px -18px rgba(11, 43, 92, 0.35);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: var(--color-ink);
+}
+
+@layer base {
+  * {
+    border-color: rgb(15 42 92 / 0.1);
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif), Georgia, serif;
+    letter-spacing: -0.01em;
+  }
+
+  /* Anchor targets clear the sticky header. */
+  :target {
+    scroll-margin-top: 6rem;
+  }
+
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Visible, on-brand focus ring for keyboard users everywhere. */
+  :focus-visible {
+    outline: 3px solid var(--color-gold-500);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  .container-page {
+    width: 100%;
+    max-width: 76rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+
+  /* Small caps section label, gold. */
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-sans), sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-gold-600);
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    padding: 0.8rem 1.6rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    line-height: 1;
+    transition: transform 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+    min-height: 44px; /* accessible touch target */
+  }
+  .btn:active { transform: translateY(1px); }
+
+  .btn-gold {
+    background: var(--color-gold-500);
+    color: var(--color-navy-950);
+    box-shadow: 0 8px 20px -8px rgba(217, 151, 0, 0.7);
+  }
+  .btn-gold:hover { background: var(--color-gold-400); }
+
+  .btn-navy {
+    background: var(--color-navy-900);
+    color: #fff;
+  }
+  .btn-navy:hover { background: var(--color-navy-700); }
+
+  .btn-outline {
+    border: 1.5px solid rgb(255 255 255 / 0.5);
+    color: #fff;
+  }
+  .btn-outline:hover { background: rgb(255 255 255 / 0.12); }
+
+  .btn-ghost {
+    border: 1.5px solid var(--color-navy-200);
+    color: var(--color-navy-900);
+  }
+  .btn-ghost:hover { background: var(--color-navy-50); }
+
+  .card {
+    background: #fff;
+    border: 1px solid rgb(15 42 92 / 0.08);
+    border-radius: 1rem;
+    box-shadow: var(--shadow-card);
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
+
+  /* Scroll-reveal: elements start hidden, .is-visible fades them up. */
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    will-change: opacity, transform;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}
