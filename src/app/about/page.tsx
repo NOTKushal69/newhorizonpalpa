@@ -50,13 +50,19 @@ export default function AboutPage() {
           </div>
           <Reveal>
             <div className="overflow-hidden rounded-3xl shadow-card">
-              <Image
-                src="/photos/front.jpg"
-                alt="Front view of the New Horizon campus"
-                width={720}
-                height={560}
-                className="h-full w-full object-cover"
-              />
+              {/* Drone footage of the campus in place of a static photo. */}
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                poster="/photos/front.jpg"
+                aria-label="Aerial video of the New Horizon campus"
+                className="aspect-[720/560] h-full w-full object-cover"
+              >
+                <source src="/video/campus-2.mp4" type="video/mp4" />
+              </video>
             </div>
           </Reveal>
         </div>
@@ -112,7 +118,7 @@ export default function AboutPage() {
           <Reveal>
             <div className="overflow-hidden rounded-3xl">
               <Image
-                src="/photos/staff-1.jpg"
+                src="/photos/principal.jpg"
                 alt="Principal, New Horizon"
                 width={480}
                 height={520}

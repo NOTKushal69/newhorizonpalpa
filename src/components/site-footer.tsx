@@ -95,6 +95,7 @@ export function SiteFooter() {
             <li><Link href="/academics" className="text-navy-100/75 hover:text-gold-400">Grade XI Streams</Link></li>
             <li><Link href="/notices" className="text-navy-100/75 hover:text-gold-400">Notices</Link></li>
             <li><Link href="/facilities" className="text-navy-100/75 hover:text-gold-400">Facilities</Link></li>
+            <li><Link href="/enrollment" className="text-navy-100/75 hover:text-gold-400">Enrollment Records</Link></li>
           </ul>
         </div>
 

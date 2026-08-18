@@ -95,8 +95,8 @@ export const highlights = [
 export const facilities = [
   {
     name: "Library",
-    image: "/photos/library.png",
-    body: "A quiet reading space with reference books and study material for every level.",
+    image: "/photos/library-new.jpg",
+    body: "A well-stocked reading room with reference books and student project work.",
   },
   {
     name: "Science Laboratories",
@@ -106,22 +106,22 @@ export const facilities = [
   {
     name: "Playground & Sports",
     image: "/photos/playground.png",
-    body: "Open ground and courts for football, basketball and daily physical activity.",
+    body: "Open ground and courts for football, volleyball and daily physical activity.",
   },
   {
-    name: "Basketball Court",
-    image: "/photos/sports.png",
+    name: "Volleyball Court",
+    image: "/photos/volleyball.jpg",
     body: "A dedicated court for training, inter-house matches and competitions.",
   },
   {
     name: "Cafeteria",
-    image: "/photos/cafeteria.png",
+    image: "/photos/canteen.jpg",
     body: "A clean canteen serving students and staff through the school day.",
   },
   {
     name: "Smart Classrooms",
-    image: "/photos/school-2.jpg",
-    body: "Bright, well-kept classrooms supported by smart-class teaching aids.",
+    image: "/photos/smart-classroom.jpg",
+    body: "Bright classrooms with smart boards for interactive, modern teaching.",
   },
 ] as const;
 
@@ -131,21 +131,21 @@ export const gallery = [
   { src: "/photos/front.jpg", alt: "Front view of the New Horizon campus" },
   { src: "/photos/students-1.jpg", alt: "New Horizon students" },
   { src: "/photos/teachers.jpg", alt: "New Horizon teaching staff" },
-  { src: "/photos/library.png", alt: "The school library" },
+  { src: "/photos/library-new.jpg", alt: "The school library" },
   { src: "/photos/science-lab.png", alt: "Students in the science laboratory" },
+  { src: "/photos/smart-classroom.jpg", alt: "A smart classroom with an interactive board" },
+  { src: "/photos/volleyball.jpg", alt: "Students playing on the volleyball court" },
+  { src: "/photos/canteen.jpg", alt: "The school canteen" },
+  { src: "/photos/toppers.jpg", alt: "Felicitating our SEE toppers" },
+  { src: "/photos/green-day.jpg", alt: "Green Day at New Horizon" },
   { src: "/photos/playground.png", alt: "The school playground" },
-  { src: "/photos/sports.png", alt: "The basketball court" },
-  { src: "/photos/cafeteria.png", alt: "The school cafeteria" },
   { src: "/photos/campus-life-1.jpg", alt: "Campus life at New Horizon" },
   { src: "/photos/campus-life-2.jpg", alt: "A school event" },
   { src: "/photos/campus-life-3.jpg", alt: "Students and staff together" },
   { src: "/photos/campus-life-4.png", alt: "A moment on campus" },
-  { src: "/photos/campus-life-5.png", alt: "School activity" },
   { src: "/photos/campus-life-6.png", alt: "School gathering" },
-  { src: "/photos/moment-1.png", alt: "A memorable school moment" },
   { src: "/photos/students-2.jpg", alt: "Students on campus" },
   { src: "/photos/school-1.jpg", alt: "The New Horizon school grounds" },
-  { src: "/photos/school-2.jpg", alt: "Inside the New Horizon campus" },
   { src: "/photos/tansen.jpg", alt: "Tansen, Palpa — home of New Horizon" },
 ] as const;
 

@@ -49,14 +49,21 @@ export default function HomePage() {
 
       {/* ── Hero ─────────────────────────────────────────────── */}
       <section className="relative isolate overflow-hidden bg-navy-950 text-white">
-        <Image
-          src="/photos/campus.jpg"
-          alt="New Horizon Awasiya Secondary School campus in Tansen, Palpa"
-          fill
-          priority
-          sizes="100vw"
-          className="-z-10 object-cover object-center opacity-35"
-        />
+        {/* Drone footage of the campus as the background. Muted + autoplay +
+            loop so it plays everywhere; the poster shows before it loads and
+            on data-saver browsers that block autoplay. */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster="/photos/campus.jpg"
+          aria-hidden="true"
+          className="absolute inset-0 -z-10 h-full w-full object-cover object-center opacity-35"
+        >
+          <source src="/video/campus-2.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-navy-950/80 via-navy-900/85 to-navy-950" />
 
         <div className="container-page grid gap-10 py-20 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:py-28">

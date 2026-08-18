@@ -8,7 +8,7 @@ import { facilities } from "@/lib/school";
 export const metadata: Metadata = {
   title: "Facilities",
   description:
-    "Campus facilities at New Horizon, Tansen — library, science laboratories, playground, basketball court, cafeteria and smart classrooms.",
+    "Campus facilities at New Horizon, Tansen — library, science laboratories, playground, volleyball court, canteen and smart classrooms.",
   alternates: { canonical: "/facilities" },
 };
 
